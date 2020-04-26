@@ -1,0 +1,18 @@
+version: '3'
+services:
+  clinic_db:
+    image: postgres:10.0
+    container_name: rxclinic_db
+    volumes:
+      - ./volumes/postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: rxclinic
+      POSTGRES_PASSWORD: 
+  clinic_api:
+    image: rx-clinic-api
+    container_name: rxclinic_api
+    user: "0"
+    volumes:
+      - ./base_site:/home/rxclinic/rxclinic
+    ports:
+      - 8000:8000
