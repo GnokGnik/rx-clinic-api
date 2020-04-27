@@ -9,7 +9,7 @@ services:
       POSTGRES_USER: rxclinic
       POSTGRES_PASSWORD: 
   clinic_api:
-    image: rx-clinic-api
+    image: krakkendocker/rx-clinic-api:1.0
     container_name: rxclinic_api
     user: "0"
     volumes:
