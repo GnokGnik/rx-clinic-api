@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9vj18bnatldw=x@h%*q#uz8lni0#is2)s((%&n&a(tuqq7bdqe'
+SECRET_KEY = '9vj18bnatldbirthdayw=x@h%*q#uz8lni0#is2)s((%&n&a(tuqq7bdqe'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'clinic'
 ]
 
 MIDDLEWARE = [
@@ -109,6 +110,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# User substitution
+# https://docs.djangoproject.com/en/1.11/topics/auth/customizing/#auth-custom-user
+
+AUTH_USER_MODEL = 'clinic.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
