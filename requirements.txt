@@ -1,6 +1,6 @@
 passlib==1.6.5
 Babel==2.3.4
-Werkzeug==0.11.15
+Werkzeug==0.15.5
 lxml==4.2.3
 decorator==4.0.10
 requests==2.20.0
